@@ -1,0 +1,22 @@
+<h1>New todo</h1>
+
+<p>
+  New todo:
+  {{input value=newTitle}}
+  <button {{action 'createTodo'}} disabled={{isCreateDisabled}}>
+    Create
+  </button>
+</p>
+
+
+
+<h2>Existing Items ({{model.length}})</h2>
+
+{{#ember-collection
+  items=model
+  cell-layout=(fixed-grid-layout "auto" 30)
+  class="thelist"
+  as |todo|
+}}
+  {{to-do todo=todo deleteAction=(action 'deleteTodo' todo)}}
+{{/ember-collection}}

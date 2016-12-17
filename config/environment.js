@@ -43,7 +43,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/ember-example';
+    // ENV.baseURL = '/ember-example';
+    ENV.rootURL = '/ember-example';
     ENV.locationType = 'hash';
   }
 
