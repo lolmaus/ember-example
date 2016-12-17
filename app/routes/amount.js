@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  queryParams: {
-    amount: {reloadModel: true}
-  },
-
   model ({amount}) {
     amount = amount ? parseInt(amount, 10) : 500000
     console.log("started generating array")
