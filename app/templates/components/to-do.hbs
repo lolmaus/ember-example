@@ -1,0 +1,16 @@
+{{input value=todo.title}}
+
+<button {{action 'toggleCompleted'}}>
+  {{if todo.completed 'Uncomplete' 'Complete'}}
+</button>
+
+{{#if deleteAction}}
+  <button {{action deleteAction}}>
+    x
+  </button>
+{{/if}}
+
+<span>
+	{{todo.title}}
+  {{if todo.completed 'Complete' 'Incomplete'}}
+</span>
